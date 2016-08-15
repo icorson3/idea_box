@@ -1,0 +1,9 @@
+<h1>All Ideas</h1>
+
+  <ul>
+    <% @ideas.each do |idea| %>
+      <h2><%= idea.title %></h2>
+      <li><%= idea.body %></li>
+      <li><%= idea.quality %></li>
+    <% end %>
+  </ul>
