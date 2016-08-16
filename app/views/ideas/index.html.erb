@@ -1,9 +1,18 @@
 <h1>All Ideas</h1>
 
-  <ul>
-    <% @ideas.each do |idea| %>
-      <h2><%= idea.title %></h2>
-      <li><%= idea.body %></li>
-      <li><%= idea.quality %></li>
-    <% end %>
-  </ul>
+  <% @ideas.each do |idea| %>
+    <ul id="each-idea">
+        <h2><%= idea.title %></h2>
+        <li><%= idea.body %></li>
+        <li><%= idea.quality %></li>
+        <li><button type="button">Update</button></li>
+    </ul>
+  <% end %>
+
+
+<h2>What is your idea?</h2>
+  <div class="form-group">
+      <input class="form-control" type="text" id="idea-title" value='Title'>
+      <input class="form-control" type="text" id="idea-body" value='Body'>
+      <input class="btn btn-default pull-right" id="create-idea" type="button" name="submit" value="Save">
+  </div>
