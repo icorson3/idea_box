@@ -16,6 +16,9 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
+  gem 'selenium-webdriver', '~> 2.53', '>= 2.53.4'
+  gem 'teaspoon'
+  gem 'teaspoon-mocha'
 end
 
 group :development do

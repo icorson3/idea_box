@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "user adds a game" do
+RSpec.feature "user adds a game", js: true do
   scenario "user adds a game using api" do
     idea = Idea.create(title: "ideaaa",
                         body: "iddeadaddd")
@@ -11,7 +11,6 @@ RSpec.feature "user adds a game" do
 
     click_on "Save"
 
-    save_and_open_page
     expect(Idea.last.title).to eq("Another Idea")
     expect(page).to have_content("Another Idea Body")
   end
