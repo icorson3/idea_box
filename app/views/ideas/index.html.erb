@@ -1,36 +1,7 @@
+
+
 <h1>All Ideas</h1>
-
-
-  <table style="width:100%">
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-    <th>Quality</th>
-  </tr>
-  <% @ideas.each do |idea| %>
-  <tr id="each-idea" data-id='<%= idea.id %>'>
-    <td contenteditable="true" id="title-text"><%= idea.title %></td>
-    <td contenteditable="true"><%= idea.body %></td>
-    <td contenteditable="true"><%= idea.quality %></td>
-    <td><button id="destroy-idea">Delete</button></td>
-  </tr>
-  <% end %>
-</table>
-    <!-- <ul id="each-idea">
-      <div id="idea-content"> -->
-        <!-- <h2 contenteditable="true" id="title-text"><%#= idea.title %></h2>
-        <input type="hidden" id="idea-id" value="<%#= idea.id %>">
-        <li contenteditable="true" id="body-text"><%#= idea.body %></li>
-        <li contenteditable="true" id="quality-text"><%#= idea.quality %></li>
-        <li id="destroy-button"><button id="destroy-idea">Delete</button></li>
-
-      </div>
-    </ul> -->
-
+  <%= render 'ideas_table' %>
 
 <h2>What is your idea?</h2>
-  <div class="form-group">
-      <input class="form-control" type="text" id="idea-title" value='Title'>
-      <input class="form-control" type="text" id="idea-body" value='Body'>
-      <input class="btn btn-default pull-right" id="create-idea" type="button" name="submit" value="Save">
-  </div>
+  <%= render 'new_idea' %>
