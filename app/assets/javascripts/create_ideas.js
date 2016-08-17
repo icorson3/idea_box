@@ -9,8 +9,10 @@ $(document).ready(function() {
       url: '/api/v1/ideas',
       data: ideaParams,
       success: function(newIdea) {
-        var listItem = "</br><td>" + newIdea.title + "</td>" + "<td>" + newIdea.body + "</td>" + "<td>" + newIdea.quality + "</td>" + '<td><button id="destroy-idea">Delete</button></td>';
+        var listItem = '<tr data-id=' + newIdea.id + ' id="each-idea">' + "<td>" + newIdea.title + "</td>" + "<td>" + newIdea.body + "</td>" + "<td>" + newIdea.quality + "</td>" + '<td><button id="destroy-idea">Delete</button></td></tr>';
         $("#each-idea").prepend(listItem)
+        $("#idea-title").val('')
+        $("#idea-body").val('')
       }
     })
   })
