@@ -43,7 +43,6 @@ $(document).ready(function() {
         url: '/api/v1/ideas/' + ideaId,
         data: ideaParams,
         success: function(){
-
           ideaRow.children('.quality-text').html(newQuality)
         }
       })
