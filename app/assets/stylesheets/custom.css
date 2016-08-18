@@ -1,7 +1,23 @@
-#idea {
+body {
+  font-family: 'Cedarville Cursive', cursive;
+  color: #004E87;
   text-align: center;
 }
 
-body {
-  font-family: 'Cedarville Cursive', cursive;
+nav {
+  background-color: #29B0B4;
+}
+
+th {
+  font-size: 20px;
+  color:#AD4B2B;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+.navbar-brand {
+  font-size: 50px;
+  color: #D8B63A;
 }
