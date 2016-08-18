@@ -1,7 +1,7 @@
 $(document).ready(function() {
   var ideaArray = ['swill', 'plausible', 'genius']
 
-  $(".title-text").on('blur', function(){
+  $("#each-idea").on('blur', ".title-text" ,function(){
   var ideaId = $(this).parents('tr').data('id')
   var ideaParams = { idea: {
                       id: ideaId,
@@ -14,7 +14,7 @@ $(document).ready(function() {
     })
   })
 
-  $(".body-text").on('blur', function(){
+  $("#each-idea").on('blur', ".body-text" ,function(){
     var ideaId = $(this).parents('tr').data('id')
     var ideaParams = { idea: {
                         id: ideaId,
