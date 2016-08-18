@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  root to: "ideas#index"
+
+  resources :ideas, only: [:index]
 
   namespace :api do
     namespace :v1 do
