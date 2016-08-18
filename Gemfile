@@ -19,6 +19,7 @@ group :development, :test do
   gem 'selenium-webdriver', '~> 2.53', '>= 2.53.4'
   gem 'teaspoon'
   gem 'teaspoon-mocha'
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development do
