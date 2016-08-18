@@ -10,7 +10,7 @@
   <tbody id="each-idea">
 
     <% @ideas.each do |idea| %>
-    <tr data-id='<%= idea.id %>' id='idea'>
+    <tr data-id='<%= idea.id %>' class='idea'>
       <td contenteditable="true" class="title-text"><%= idea.title %></td>
       <td contenteditable="true" class="body-text"><%= idea.body %></td>
       <td class="quality-text"><%= idea.quality %></td>

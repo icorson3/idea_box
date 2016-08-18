@@ -29,6 +29,7 @@ $(".title-text").on('blur', function(){
 
     $("#each-idea").on('click', '.upvote-idea', function(){
       var ideaId = $(this).parents('tr').data('id')
+      var ideaRow = $(this).parents('tr')
       var currentQuality = $(this).closest('tr').children('.quality-text').text()
       var qualityIndex = ideaArray.indexOf(currentQuality)
       if(qualityIndex !== ideaArray.length - 1) {
@@ -39,9 +40,9 @@ $(".title-text").on('blur', function(){
           type: 'PATCH',
           url: '/api/v1/ideas/' + ideaId,
           data: ideaParams,
-          success: function(newQuality){
-            debugger
-            $(this).closest('tr').children('.quality-text').text(data.quality)
+          success: function(){
+
+            ideaRow.children('.quality-text').html(newQuality)
           }
           })
         }
